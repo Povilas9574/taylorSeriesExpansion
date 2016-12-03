@@ -52,6 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MathSAF\MathSAF.ErrorEvaluationAPI\IErrorEvaluator.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansionsAPI\ITaylorExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansionsAPI\Result.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -75,6 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MathSAF\MathSAF.ErrorEvaluation\" />
+    <Folder Include="MathSAF\MathSAF.TaylorSeriesExpansions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
