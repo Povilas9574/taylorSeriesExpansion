@@ -8,6 +8,6 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansionsAPI
 {
     interface ITaylorExpansion
     {
-        Result Calculate(double error);
+        Result Calculate();
     }
 }
