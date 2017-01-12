@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2049718D-3740-4A7E-8FFA-E00C1B2855CC}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TaylorSeries</RootNamespace>
     <AssemblyName>TaylorSeries</AssemblyName>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,8 +56,15 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MathSAF\MathSAF.ErrorEvaluationAPI\IErrorEvaluator.cs" />
+    <Compile Include="MathSAF\MathSAF.Helpers\BernulliNumbers.cs" />
+    <Compile Include="MathSAF\MathSAF.Helpers\BinomialCoeficient.cs" />
+    <Compile Include="MathSAF\MathSAF.Helpers\FactorialHelper.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansionsAPI\ITaylorExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansionsAPI\Result.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\LogarithmicExpansion\LogarithmicExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalCoshExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalSineExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalTanhExpansion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -81,7 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MathSAF\MathSAF.ErrorEvaluation\" />
-    <Folder Include="MathSAF\MathSAF.TaylorSeriesExpansions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

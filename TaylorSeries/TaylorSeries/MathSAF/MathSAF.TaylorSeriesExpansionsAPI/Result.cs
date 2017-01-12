@@ -8,5 +8,10 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansionsAPI
 {
     class Result
     {
+        public double Answer
+        {
+            set;
+            get;
+        }
     }
 }
