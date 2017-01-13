@@ -7,8 +7,9 @@ using TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansionsAPI;
 
 namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExpansions.HiperbolicalExpansions
 {
-    class HiperbolicalTanhExpansion : ITaylorExpansion
+    class HiperbolicalCothExpansion : ITaylorExpansion
     {
+
         private double Number
         {
             set;
@@ -19,7 +20,7 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExp
             set;
             get;
         }
-        public HiperbolicalTanhExpansion(double error, double number)
+        public HiperbolicalCothExpansion(double error, double number)
         {
             this.Error = error;
             this.Number = number;
@@ -35,10 +36,10 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExp
             }
             else
             {
-                HiperbolicalSineExpansion sinh = new HiperbolicalSineExpansion(Error,Number);
+                HiperbolicalSineExpansion sinh = new HiperbolicalSineExpansion(Error, Number);
                 HiperbolicalCoshExpansion cosh = new HiperbolicalCoshExpansion(Error, Number);
 
-                result.Answer = sinh.Calculate().Answer / cosh.Calculate().Answer;
+                result.Answer = cosh.Calculate().Answer / sinh.Calculate().Answer;
 
                 return result;
             }
