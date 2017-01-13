@@ -28,7 +28,6 @@ namespace TaylorSeries.MathSAF.MathSAF.Helpers
                 for (int k = 1; k <= n; k++)
                 {
                    sum = sum + ( binomialCoefCalc.CountBinomialCoeficient(n + 1, k + 1) * BernulliNumber(n - k));//TODO: cia klaida kazkur
-                    
                 }
                 return ((-1 /( n + 1)) * sum);
             }
