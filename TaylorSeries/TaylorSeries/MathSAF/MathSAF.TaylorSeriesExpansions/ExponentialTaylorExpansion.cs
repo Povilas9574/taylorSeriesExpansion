@@ -16,7 +16,7 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
         private IErrorEvaluator evaluator;
         private FactorialHelper factorial = new FactorialHelper();
 
-        public ExponentialTaylorExpansion(double error, int pow)
+        public ExponentialTaylorExpansion(double error, double pow)
         {
             this.error = error;
             this.pow = pow;

@@ -36,6 +36,7 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExp
             }
             else
             {
+
                 HiperbolicalSineExpansion sinh = new HiperbolicalSineExpansion(Error, Number);
                 HiperbolicalCoshExpansion cosh = new HiperbolicalCoshExpansion(Error, Number);
 
