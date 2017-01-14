@@ -56,6 +56,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MathSAF\MathSAF.ErrorEvaluationAPI\IErrorEvaluator.cs" />
+    <Compile Include="MathSAF\MathSAF.ErrorEvaluation\ErrorEvaluator.cs" />
     <Compile Include="MathSAF\MathSAF.Helpers\BernulliNumbers.cs" />
     <Compile Include="MathSAF\MathSAF.Helpers\BinomialCoeficient.cs" />
     <Compile Include="MathSAF\MathSAF.Helpers\FactorialHelper.cs" />
@@ -89,9 +90,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MathSAF\MathSAF.ErrorEvaluation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
