@@ -63,6 +63,7 @@
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansionsAPI\Result.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\LogarithmicExpansion\LogarithmicExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalCoshExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalCothExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalSineExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalTanhExpansion.cs" />
     <Compile Include="Program.cs" />
