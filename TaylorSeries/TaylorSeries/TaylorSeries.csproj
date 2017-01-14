@@ -67,6 +67,10 @@
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalCothExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalSineExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalTanhExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\ReverseTrigonometricalExpansions\ArccosExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\ReverseTrigonometricalExpansions\ArcctgExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\ReverseTrigonometricalExpansions\ArcsinExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\ReverseTrigonometricalExpansions\ArctgExpansion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
