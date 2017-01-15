@@ -27,11 +27,11 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExp
         }
         public Result Calculate()
         {
-            ITaylorExpansion exponentialCalc1; //TODO: e^number, error
-            ITaylorExpansion exponentialCalc2;//TODO: e^-number, error
+            ITaylorExpansion exponentialCalc1 = new ExponentialTaylorExpansion(Error, Number); //TODO: e^number, error
+            ITaylorExpansion exponentialCalc2 = new ExponentialTaylorExpansion(Error, -Number);//TODO: e^-number, error
             Result result = new Result();
 
-           // result.Answer = (exponentialCalc1.Calculate().Answer + exponentialCalc2.Calculate().Answer) / 2;
+            result.Answer = (exponentialCalc1.Calculate().Answer + exponentialCalc2.Calculate().Answer) / 2;
             return result;
         }
     }

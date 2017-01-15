@@ -15,7 +15,7 @@ namespace TaylorSeries.MathSAF.MathSAF.ErrorEvaluation
             int n=1;
             while (true)
             {
-                if ((m * Math.Pow(Math.Abs(x), n + 1)) / factorial.CalculateFactorial(n + 1) >= error)
+                if ((m * Math.Pow(Math.Abs(x), n + 1)) / factorial.CalculateFactorial(n + 1) <= error)
                 {
                     return n;
                 }

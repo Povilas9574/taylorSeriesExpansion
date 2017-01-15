@@ -3,43 +3,85 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaylorSeries.MathSAF.MathSAF.ErrorEvaluation;
+using TaylorSeries.MathSAF.MathSAF.ErrorEvaluationAPI;
 using TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansionsAPI;
 
 namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.LogarithmicExpansion
 {
     class LogarithmicExpansion : ITaylorExpansion
     {
-        public LogarithmicExpansion(double number, int repeatIndex)
+        double Error
         {
+            set;
+            get;
         }
-
-        long RepeatIndex
+        double Number
         {
             set;
             get;
         }
 
+        int RepeatIndex
+        {
+            set;
+            get;
+        }
+
+        IErrorEvaluator evaluator = new ErrorEvaluator();
+
+        public LogarithmicExpansion(double number, double error)
+        {
+            this.Error = error;
+            this.Number = number;
+        }
+
+
         public Result Calculate()
         {
-            throw new NotImplementedException();
+            bool stop = false;
+            Result result = new Result();
+            double m = 1 / (1 + Number);
+            double tempNumber = Number;
+            int cycles = 0;
+            RepeatIndex = evaluator.Evaluate(m, Error, Number);
+
+            while (!stop)
+            {
+                if (tempNumber > 1 && tempNumber <= 2)
+                {
+                    tempNumber = tempNumber - 1;
+                    double x = 1 / tempNumber;
+                    result.Answer += CalculateOne(x);
+                    stop = true;
+                }
+                if (tempNumber > 2)
+                {
+                    tempNumber = tempNumber - 1;
+                    double x = 1 / tempNumber;
+                    result.Answer += CalculateOne(x);
+                }
+                if (tempNumber < 1 && tempNumber > 0)
+                {
+                    double x = tempNumber - 1;
+                    result.Answer += CalculateOne(x);
+                    stop = true;
+                }
+                cycles++;
+            }
+            return result;
         }
 
-        private double CalculateNMember(int n)
+        private double CalculateOne(double number)
         {
-            return 0;
+            double result = 0;
+            for (int i = 1; i <= RepeatIndex+1; i++)
+            {
+                result += Math.Pow((-1), i - 1) * Math.Pow(number, i) / i;
+            }
+            return result;
         }
 
-        private double FindParameters(int n)
-        {
-            return 0;
-        }
-
-        private double AdditionFormula(double number)
-        {
-            double returningX = 0;
-
-            return 0;
-        }
 
 
     }
