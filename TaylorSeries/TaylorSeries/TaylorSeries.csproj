@@ -62,7 +62,10 @@
     <Compile Include="MathSAF\MathSAF.Helpers\FactorialHelper.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansionsAPI\ITaylorExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansionsAPI\Result.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\ExponentialTaylorExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\LogarithmicExpansion\LogarithmicExpansion.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\Pi.cs" />
+    <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\Power.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalCoshExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalCothExpansion.cs" />
     <Compile Include="MathSAF\MathSAF.TaylorSeriesExpansions\TrigonometricalExpansions\HiperbolicalExpansions\HiperbolicalSineExpansion.cs" />
