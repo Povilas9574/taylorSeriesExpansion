@@ -24,18 +24,24 @@ namespace TaylorSeries.Command
             List<string> results = dialog.ShowSelectionDialog(args);
             double number = 0;
             double error = 0;
+            bool parsingfailed = false;
             if (!double.TryParse(results.ElementAt(0), out number))
             {
+                parsingfailed = true;
                 printer.Print("First input is not a number");
             }
             if (!double.TryParse(results.ElementAt(1), out error))
             {
+                parsingfailed = true;
                 printer.Print("Second input is not a number");
             }
-            ITaylorExpansion exp = new LogarithmicExpansion(number, error);
-            Result result = exp.Calculate();
+            if (!parsingfailed)
+            {
+                ITaylorExpansion exp = new LogarithmicExpansion(number, error);
+                Result result = exp.Calculate();
 
-            printer.Print("Answer "+ result.Answer);
+                printer.Print("Answer " + result.Answer);
+            }
         }
 
         public LogartihmCommand(IUIFactory fact)
