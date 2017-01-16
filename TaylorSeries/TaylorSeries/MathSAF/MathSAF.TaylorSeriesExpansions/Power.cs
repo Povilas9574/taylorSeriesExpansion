@@ -13,19 +13,20 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
         private double _error;
         private double _x;
         private double _a;
-        private IErrorEvaluator evaluator;// = new Evaluator();
+        private IErrorEvaluator evaluator = new ErrorEvaluator();// = new Evaluator();
         private double _mult = 1;
         private double _xKappa;// -1 < x < 1
 
-        public Power(double error, double x, double a, IErrorEvaluator Evaluator)
+        public Power(double error, double x, double a/*, IErrorEvaluator Evaluator*/)
         {
             _error = error;
             _x = x;
             _a = a;
-            evaluator = Evaluator;
+            //evaluator = Evaluator;
         }
         public Result Calculate()
         {
+            Result r = new Result();
             double result = 0;
             int xInt = Convert.ToInt32(_x);
             int aInt = Convert.ToInt32(_a);
@@ -69,10 +70,12 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
                 else if(_x == xInt && _a != aInt && _x < 0 && _a > 0)//-2^1/2                   +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
                 else if(_x == xInt && _a != aInt && _x < 0 && _a < 0)//-2^-(1/2)                +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
                 else if(_x != xInt && _a == aInt && _x > 0 && _a > 0)//(1/2)^2                  +
                 {
@@ -144,14 +147,17 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
                 else if(_x != xInt && _a != aInt && _x < 0 && _a > 0)//-(1/2)^(1/2)             +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
                 else                                                      //-(1/2)^-(1/2)       +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
             }
             result = result * _mult;
-            return new Result();
+            r.Answer = result;
+            return r;
         }
         private double getM()
         {
