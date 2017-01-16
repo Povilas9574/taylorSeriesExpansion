@@ -24,6 +24,9 @@ namespace TaylorSeries
             var commands = new Dictionary<string, ICommand>
             {
                 {"Logarithm", new LogartihmCommand(uiFactory)},
+                {"Pi", new PiCommand(uiFactory) },
+                {"e", new ExponentialCommand(uiFactory) },
+                {"Power", new PowerCommand(uiFactory) },
                 {"Arctg", new ArctgCommand(uiFactory) },
                 {"Arcctg", new ArcctgCommand(uiFactory) },
                 {"Arcsin", new ArcsinCommand(uiFactory) },

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansionsAPI;
 using TaylorSeries.MathSAF.MathSAF.ErrorEvaluationAPI;
+using TaylorSeries.MathSAF.MathSAF.ErrorEvaluation;
 
 namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
 {
