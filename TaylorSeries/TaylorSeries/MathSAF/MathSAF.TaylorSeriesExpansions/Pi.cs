@@ -19,6 +19,7 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
         }
         public Result Calculate()
         {
+            Result r = new Result();
             double result = 1;
             int n = evaluator.Evaluate(3.15, _error, 1);
             for (int i = 1; i <= n; i++)
@@ -26,8 +27,9 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
                 result += Math.Pow(-1, i % 2) * 1 / (1 + (2 * i));
             }
             result *= 4;
-            System.Windows.Forms.MessageBox.Show(result.ToString());
-            return new Result();
+            r.Answer = result;
+            //System.Windows.Forms.MessageBox.Show(result.ToString());
+            return r;
         }
     }
 }
