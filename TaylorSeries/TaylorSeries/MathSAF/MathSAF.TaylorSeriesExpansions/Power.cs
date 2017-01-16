@@ -13,16 +13,16 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
         private double _error;
         private double _x;
         private double _a;
-        private IErrorEvaluator evaluator;// = new Evaluator();
+        private IErrorEvaluator evaluator = new ErrorEvaluator();// = new Evaluator();
         private double _mult = 1;
         private double _xKappa;// -1 < x < 1
 
-        public Power(double error, double x, double a, IErrorEvaluator Evaluator)
+        public Power(double error, double x, double a/*, IErrorEvaluator Evaluator*/)
         {
             _error = error;
             _x = x;
             _a = a;
-            evaluator = Evaluator;
+            //evaluator = Evaluator;
         }
         public Result Calculate()
         {
