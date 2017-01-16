@@ -26,6 +26,7 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
         }
         public Result Calculate()
         {
+            Result r = new Result();
             double result = 0;
             int xInt = Convert.ToInt32(_x);
             int aInt = Convert.ToInt32(_a);
@@ -69,10 +70,12 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
                 else if(_x == xInt && _a != aInt && _x < 0 && _a > 0)//-2^1/2                   +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
                 else if(_x == xInt && _a != aInt && _x < 0 && _a < 0)//-2^-(1/2)                +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
                 else if(_x != xInt && _a == aInt && _x > 0 && _a > 0)//(1/2)^2                  +
                 {
@@ -144,14 +147,17 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
                 else if(_x != xInt && _a != aInt && _x < 0 && _a > 0)//-(1/2)^(1/2)             +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
                 else                                                      //-(1/2)^-(1/2)       +negalima
                 {
                     //Result.NotExist = true;
+                    r.Exist = false;
                 }
             }
             result = result * _mult;
-            return new Result();
+            r.Answer = result;
+            return r;
         }
         private double getM()
         {
