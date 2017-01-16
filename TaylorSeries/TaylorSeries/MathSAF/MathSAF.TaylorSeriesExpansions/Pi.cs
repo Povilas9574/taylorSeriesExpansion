@@ -10,11 +10,11 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
 {
     class Pi : ITaylorExpansion
     {
-        private IErrorEvaluator evaluator;// = new Evaluator();
+        private IErrorEvaluator evaluator = new ErrorEvaluator();// = new Evaluator();
         private double _error;
-        public Pi(double error, IErrorEvaluator Evaluator)
+        public Pi(double error/*, IErrorEvaluator Evaluator*/)
         {
-            evaluator = Evaluator;
+            //evaluator = Evaluator;
             _error = error;
         }
         public Result Calculate()
