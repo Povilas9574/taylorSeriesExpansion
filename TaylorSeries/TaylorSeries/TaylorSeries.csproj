@@ -49,7 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\ArccosCommand.cs" />
+    <Compile Include="Command\ArcctgCommand.cs" />
+    <Compile Include="Command\ArcsinCommand.cs" />
+    <Compile Include="Command\ArctgCommand.cs" />
     <Compile Include="Command\CommandProcessor.cs" />
+    <Compile Include="Command\ExponentialCommand.cs" />
+    <Compile Include="Command\HiperbolicalCoshCommand.cs" />
+    <Compile Include="Command\HiperbolicalCothCommand.cs" />
+    <Compile Include="Command\HiperbolicalSinhCommand.cs" />
+    <Compile Include="Command\HiperbolicalTanhCommand.cs" />
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Command\ICommandProcessor.cs" />
     <Compile Include="Command\LogartihmCommand.cs" />

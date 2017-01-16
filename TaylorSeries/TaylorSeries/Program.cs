@@ -24,7 +24,14 @@ namespace TaylorSeries
             var commands = new Dictionary<string, ICommand>
             {
                 {"Logarithm", new LogartihmCommand(uiFactory)},
-
+                {"Arctg", new ArctgCommand(uiFactory) },
+                {"Arcctg", new ArcctgCommand(uiFactory) },
+                {"Arcsin", new ArcsinCommand(uiFactory) },
+                {"Arccos", new ArccosCommand(uiFactory) },
+                {"Coth", new HiperbolicalCothCommand(uiFactory) },
+                {"Tanh", new HiperbolicalTanhCommand(uiFactory) },
+                {"Sinh", new HiperbolicalSinhCommand(uiFactory) },
+                {"Cosh", new HiperbolicalCoshCommand(uiFactory) }
             };
 
             var controller = uiFactory.CreateController(commands, processor);

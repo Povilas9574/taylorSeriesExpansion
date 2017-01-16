@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TaylorSeries.MathSAF.MathSAF.ErrorEvaluationAPI;
 using TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansionsAPI;
 using TaylorSeries.MathSAF.MathSAF.Helpers;
+using TaylorSeries.MathSAF.MathSAF.ErrorEvaluation;
 
 namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
 {
@@ -13,7 +14,7 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions
     {
         private double error;
         private double pow = 1;
-        private IErrorEvaluator evaluator;
+        private IErrorEvaluator evaluator = new ErrorEvaluator();
         private FactorialHelper factorial = new FactorialHelper();
 
         public ExponentialTaylorExpansion(double error, double pow)
