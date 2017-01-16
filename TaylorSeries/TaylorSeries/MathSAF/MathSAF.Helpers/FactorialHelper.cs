@@ -23,7 +23,7 @@ namespace TaylorSeries.MathSAF.MathSAF.Helpers
         public long CalculateFactNoRecursion(long x)
         {
             long result = 1;
-            for (long i = 1; i < x; i++)
+            for (long i = 1; i <= x; i++)
             {
                 result = result * i;
             }
