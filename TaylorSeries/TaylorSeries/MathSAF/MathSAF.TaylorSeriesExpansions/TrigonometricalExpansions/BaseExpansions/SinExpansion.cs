@@ -28,7 +28,25 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExp
 
         public Result Calculate()
         {
-            return new Result();
+            Helpers.FactorialHelper factorial = new Helpers.FactorialHelper();
+            int n = 1;
+            while (true)
+            {
+                if ((Math.Pow(Math.Abs(Number), (2 * n + 3))) / factorial.CalculateFactorial(2 * n + 3) <= Error)
+                {
+                    break;
+                }
+                n++;
+            }
+            Result result = new Result();
+            result.Exist = true;
+            result.Answer = 0;
+            for (int i = 0; i <= n; i++)
+            {
+                result.Answer = result.Answer + (Math.Pow(-1, i) * Math.Pow(Number, 2 * i + 1))/ factorial.CalculateFactorial(2 * i +1);
+            }
+
+            return result;
         }
     }
 }

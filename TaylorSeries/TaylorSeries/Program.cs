@@ -35,6 +35,10 @@ namespace TaylorSeries
                 {"Tanh", new HiperbolicalTanhCommand(uiFactory) },
                 {"Sinh", new HiperbolicalSinhCommand(uiFactory) },
                 {"Cosh", new HiperbolicalCoshCommand(uiFactory) },
+                {"Cot", new CotCommand(uiFactory) },
+                {"Tan", new TanCommand(uiFactory) },
+                {"Sin", new SinCommand(uiFactory) },
+                {"Cos", new CosCommand(uiFactory) },
             };
 
             var controller = uiFactory.CreateController(commands, processor);

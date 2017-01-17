@@ -9,6 +9,12 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExp
 {
     class TanExpansion : ITaylorExpansion
     {
+
+        public TanExpansion(double x, double error)
+        {
+            this.Error = error;
+            this.Number = x;
+        } 
         private double Number
         {
             set;
@@ -23,7 +29,21 @@ namespace TaylorSeries.MathSAF.MathSAF.TaylorSeriesExpansions.TrigonometricalExp
 
         public Result Calculate()
         {
-            throw new NotImplementedException();
+            Result result = new Result();
+            if (Number == 0)
+            {
+                result.Answer = 0;
+                return result;
+            }
+            else
+            {
+                SinExpansion sin = new SinExpansion(Number, Error);
+                CosExpansion cos = new CosExpansion(Number, Error);
+
+                result.Answer = sin.Calculate().Answer / cos.Calculate().Answer;
+
+                return result;
+            }
         }
     }
 }

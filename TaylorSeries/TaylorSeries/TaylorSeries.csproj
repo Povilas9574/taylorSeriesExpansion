@@ -54,6 +54,8 @@
     <Compile Include="Command\ArcsinCommand.cs" />
     <Compile Include="Command\ArctgCommand.cs" />
     <Compile Include="Command\CommandProcessor.cs" />
+    <Compile Include="Command\CosCommand.cs" />
+    <Compile Include="Command\CotCommand.cs" />
     <Compile Include="Command\ExponentialCommand.cs" />
     <Compile Include="Command\HiperbolicalCoshCommand.cs" />
     <Compile Include="Command\HiperbolicalCothCommand.cs" />
@@ -64,6 +66,8 @@
     <Compile Include="Command\LogartihmCommand.cs" />
     <Compile Include="Command\PiCommand.cs" />
     <Compile Include="Command\PowerCommand.cs" />
+    <Compile Include="Command\SinCommand.cs" />
+    <Compile Include="Command\TanCommand.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
